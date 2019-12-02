@@ -685,7 +685,7 @@ sequence by typing it in the <code class="docutils literal notranslate"><span cl
 <p>Or use these in the <code class="docutils literal notranslate"><span class="pre">analysis-17Q1.1</span></code> environment to be analyzing data over here as
 the data are being collected over there…</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">h</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>                               <span class="c1"># the last 2 scans</span>
-<span class="n">integrate_and_save</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">save_image</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>   <span class="c1"># saves a copy of the 1D diffraction pattern</span>
+<span class="n">integrate_and_save</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">save_image</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>   <span class="c1"># saves a copy of the 1D diffraction pattern</span>
 <span class="n">h</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>                                <span class="c1"># 2 scan ago</span>
 <span class="n">integrate_and_save</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>                     <span class="c1"># saves a copy of the image AND a copy of the 1D diffraction pattern</span>
 </pre></div>

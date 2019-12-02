@@ -347,8 +347,8 @@ This can take values between 0.1s to 5s.</p></li>
 </ul>
 </div>
 <p>Automated dark collection is enabled by default and it can be turned off by:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">glbl</span><span class="p">[</span><span class="s1">&#39;auto_dark&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
-<span class="n">glbl</span><span class="p">[</span><span class="s1">&#39;shutter_control&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">glbl</span><span class="p">[</span><span class="s1">&#39;auto_dark&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">glbl</span><span class="p">[</span><span class="s1">&#39;shutter_control&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
 </pre></div>
 </div>
 <p>And the duration of your dark window can be modified by:</p>
@@ -536,9 +536,9 @@ your sample</p></td>
 </pre></div>
 </div>
 <p>This <code class="docutils literal notranslate"><span class="pre">Phase</span> <span class="pre">Info</span></code> will be parsed as:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;sample_composition&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Na&#39;</span><span class="p">:</span><span class="mf">0.09</span><span class="p">,</span> <span class="s1">&#39;Cl&#39;</span><span class="p">:</span><span class="mf">0.09</span><span class="p">,</span> <span class="sb">`H`</span><span class="p">:</span><span class="mf">1.82</span><span class="p">,</span> <span class="sb">`O`</span><span class="p">:</span><span class="mf">0.91</span><span class="p">},</span>
- <span class="s1">&#39;sample_phase&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;NaCl&#39;</span><span class="p">:</span><span class="mf">0.09</span><span class="p">,</span> <span class="s1">&#39;H20&#39;</span><span class="p">:</span><span class="mf">0.91</span><span class="p">},</span>
- <span class="s1">&#39;composition_string&#39;</span><span class="p">:</span> <span class="s1">&#39;Na0.09Cl0.09H1.82O0.91&#39;</span><span class="p">}</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>{&#39;sample_composition&#39;: {&#39;Na&#39;:0.09, &#39;Cl&#39;:0.09, `H`:1.82, `O`:0.91},
+ &#39;sample_phase&#39;: {&#39;NaCl&#39;:0.09, &#39;H20&#39;:0.91},
+ &#39;composition_string&#39;: &#39;Na0.09Cl0.09H1.82O0.91&#39;}
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">composition_string</span></code> is designed for data reduction software going to be
@@ -583,7 +583,7 @@ you would see:</p>
 </li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">import_sample_info</span><span class="p">()</span>
-<span class="o">***</span> <span class="n">End</span> <span class="n">of</span> <span class="kn">import</span> <span class="nn">Sample</span> <span class="nn">object</span> <span class="o">***</span>
+<span class="o">***</span> <span class="n">End</span> <span class="n">of</span> <span class="kn">import</span> <span class="nn">Sample</span> <span class="nb">object</span> <span class="o">***</span>
 
 <span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">bt</span><span class="o">.</span><span class="n">list</span><span class="p">()</span>
 

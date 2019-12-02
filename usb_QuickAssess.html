@@ -225,8 +225,8 @@ helps you keep track of appropriate dark frames. With <code class="docutils lite
 <code class="docutils literal notranslate"><span class="pre">xpdAcq</span></code> can automatically subtract your light frames from corresponding dark
 frames when you save your tiffs.</p>
 <p>This behavior can be turned off by giving additional argument:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">save_last_tiff</span><span class="p">(</span><span class="n">dark_sub_bool</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
-<span class="n">save_tiff</span><span class="p">(</span><span class="n">db</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">dark_sub_bool</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">save_last_tiff</span><span class="p">(</span><span class="n">dark_sub_bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<span class="n">save_tiff</span><span class="p">(</span><span class="n">db</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">dark_sub_bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -241,7 +241,7 @@ sequence by typing it in the <code class="docutils literal notranslate"><span cl
 <p>Or use these in the <code class="docutils literal notranslate"><span class="pre">analysis</span></code> environment to be analyzing data over here as
 the data are being collected over there…</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">h</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>                               <span class="c1"># the last 2 scans</span>
-<span class="n">integrate_and_save</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">save_image</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>   <span class="c1"># saves a copy of the 1D diffraction pattern</span>
+<span class="n">integrate_and_save</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">save_image</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>   <span class="c1"># saves a copy of the 1D diffraction pattern</span>
 <span class="n">h</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>                                <span class="c1"># 2 scan ago</span>
 <span class="n">integrate_and_save</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>                     <span class="c1"># saves a copy of the image AND a copy of the 1D diffraction pattern</span>
 </pre></div>
