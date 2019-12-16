@@ -252,20 +252,20 @@ beamtime object is linked, index-based syntax will not be allowed.</p>
 
 <p class="rubric">Examples</p>
 <p>Basic usage: run samples and plans by number</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">xrun</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">xrun</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Advanced usage: use custom plan which is compatible with bluesky</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">xrun</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">custom_plan</span><span class="p">)</span>  <span class="c1"># sample 3, an arbitrary bluesky plan</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">xrun</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">custom_plan</span><span class="p">)</span>  <span class="c1"># sample 3, an arbitrary bluesky plan</span>
 </pre></div>
 </div>
 <p>Or custom sample info. sample just has to be dict-like
 and contain the required keys.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">xrun</span><span class="p">(</span><span class="n">custom_sample_dict</span><span class="p">,</span> <span class="n">custom_plan</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">xrun</span><span class="p">(</span><span class="n">custom_sample_dict</span><span class="p">,</span> <span class="n">custom_plan</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Or use completely custom dark frame logic</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">xrun</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">custom_plan</span><span class="p">,</span> <span class="n">dark_strategy</span><span class="o">=</span><span class="n">some_custom_func</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">xrun</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">custom_plan</span><span class="p">,</span> <span class="n">dark_strategy</span><span class="o">=</span><span class="n">some_custom_func</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="method">
@@ -342,7 +342,7 @@ linked to xpdAcq.</p></li>
 <p>area detector being triggered will  always be the one configured
 in global state. To find out which these are, please using
 following commands:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">xpd_configuration</span><span class="p">[</span><span class="s1">&#39;area_det&#39;</span><span class="p">]</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">xpd_configuration</span><span class="p">[</span><span class="s1">&#39;area_det&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>to see which device is being linked</p>
@@ -382,14 +382,14 @@ detailed information.</p>
 <p class="rubric">Notes</p>
 <p>1. To see which area detector and temperature controller
 will be used, type the following commands:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">xpd_configuration</span><span class="p">[</span><span class="s1">&#39;area_det&#39;</span><span class="p">]</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">xpd_configuration</span><span class="p">[</span><span class="s1">&#39;area_det&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">xpd_configuration</span><span class="p">[</span><span class="s1">&#39;temp_controller&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>2. To change the default behavior to shutter-always-open,
 please pass the argument for <code class="docutils literal notranslate"><span class="pre">per_step</span></code> in the <code class="docutils literal notranslate"><span class="pre">ScanPlan</span></code>
 definition, as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ScanPlan</span><span class="p">(</span><span class="n">bt</span><span class="p">,</span> <span class="n">Tramp</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">per_step</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ScanPlan</span><span class="p">(</span><span class="n">bt</span><span class="p">,</span> <span class="n">Tramp</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">per_step</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>This will create a <code class="docutils literal notranslate"><span class="pre">Tramp</span></code> ScanPlan, with shutter always
@@ -428,14 +428,14 @@ detailed information.</p>
 <p class="rubric">Notes</p>
 <p>1. To see which area detector and temperature controller
 will be used, type the following commands:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">xpd_configuration</span><span class="p">[</span><span class="s1">&#39;area_det&#39;</span><span class="p">]</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">xpd_configuration</span><span class="p">[</span><span class="s1">&#39;area_det&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">xpd_configuration</span><span class="p">[</span><span class="s1">&#39;temp_controller&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>2. To change the default behavior to shutter-always-open,
 please pass the argument for <code class="docutils literal notranslate"><span class="pre">per_step</span></code> in the <code class="docutils literal notranslate"><span class="pre">ScanPlan</span></code>
 definition, as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ScanPlan</span><span class="p">(</span><span class="n">bt</span><span class="p">,</span> <span class="n">Tlist</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="mi">300</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">198</span><span class="p">],</span> <span class="n">per_step</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ScanPlan</span><span class="p">(</span><span class="n">bt</span><span class="p">,</span> <span class="n">Tlist</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="mi">300</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">198</span><span class="p">],</span> <span class="n">per_step</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>This will create a <code class="docutils literal notranslate"><span class="pre">Tlist</span></code> ScanPlan, with shutter always
@@ -467,13 +467,13 @@ detailed information.</p>
 <p class="rubric">Notes</p>
 <p>To see which area detector and shutter will be used, type the
 following commands:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">xpd_configuration</span><span class="p">[</span><span class="s1">&#39;area_det&#39;</span><span class="p">]</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">xpd_configuration</span><span class="p">[</span><span class="s1">&#39;area_det&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">xpd_configuration</span><span class="p">[</span><span class="s1">&#39;shutter&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>To override default behavior and keep the shutter open throughout
 scan , create ScanPlan with following syntax:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ScanPlan</span><span class="p">(</span><span class="n">bt</span><span class="p">,</span> <span class="n">tseries</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ScanPlan</span><span class="p">(</span><span class="n">bt</span><span class="p">,</span> <span class="n">tseries</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
